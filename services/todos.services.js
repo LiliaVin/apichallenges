@@ -9,6 +9,13 @@ const Todos = {
         .set('Accept','application/json')
         .set('X-CHALLENGER', token);
         return response;
+    },
+
+    head: async(token)=>{
+        const response = await supertest (urls.challenge)
+        .head('/todos')
+        .set('X-CHALLENGER', token);
+        return response;
     }
     
     
