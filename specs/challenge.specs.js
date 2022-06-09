@@ -20,7 +20,7 @@ describe('Отправляем сетевые запросы', () => {
        const r = await Challenges.get(token);
        assert.strictEqual(r.statusCode, 200, 'statusCode не 200');
    });
-   it ('Получить Get Todos', async () => {
+   it ('Получить GET Todos', async () => {
        const r = await Todos.get(token);
        assert.strictEqual(r.statusCode, 200, 'statusCode не 200')
    })
