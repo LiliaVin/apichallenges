@@ -4,6 +4,7 @@ const chai = require ("chai");
 const Challenger = require ('../services/challenger.services')
 const Challenges = require ('../services/challenges.services')
 const Todos = require ('../services/todos.services')
+//const TodosId200 = require ('../services/todos{id}(200).services')
 
 
 describe('Отправляем сетевые запросы', () => {
@@ -27,6 +28,18 @@ describe('Отправляем сетевые запросы', () => {
    it ('Получить HEAD Todos', async () => {
     const r = await Todos.head(token);
     assert.strictEqual(r.statusCode, 200, 'statusCode не 200')
-})
+   })
+   it ('Получить POST Todos', async () => {
+    const r = await Todos.post(token);
+    assert.strictEqual(r.statusCode, 201, 'statusCode не 201')
+   })
+   it ('Получить GET XML Todos', async () => {
+    const r = await Todos.get(token);
+    assert.strictEqual(r.statusCode, 200, 'statusCode не 200')
+   })
+   it ('Получить GET DoneStatus Todos', async () => {
+    const r = await Todos.get(token);
+    assert.strictEqual(r.statusCode, 200, 'statusCode не 200')
+   })
 
 });
