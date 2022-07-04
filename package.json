@@ -4,14 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha specs/**/*.specs.js -timeout 50000 --require babel-register"
+    "test": "mocha --config .mocharc.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@faker-js/faker": "github:faker-js/faker",
+    "allure-mocha": "^2.0.0-beta.18",
     "chai": "^4.3.6",
     "mocha": "^10.0.0",
+    "mocha-multi-reporters": "^1.5.1",
+    "mochawesome": "^7.1.3",
     "supertest": "^6.2.3"
   },
   "devDependencies": {

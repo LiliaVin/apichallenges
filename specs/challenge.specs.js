@@ -1,5 +1,6 @@
 
 const { assert } = require("chai");
+const TodoBuilder = require ('../fixtures/builder/todo');
 const chai = require ("chai");
 const Challenger = require ('../services/challenger.services')
 const Challenges = require ('../services/challenges.services')
